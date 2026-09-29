@@ -1,0 +1,22 @@
+Feature/Source,Window,Feature-Safe?,Reason
+log_impressions_90d,90-day pre-export aggregate,YES,Pre-export; no future data
+log_clicks_90d,90-day pre-export aggregate,YES,Pre-export
+log_sessions_90d,90-day pre-export aggregate,YES,Pre-export
+log_ai_sessions_90d,90-day pre-export aggregate,YES,Pre-export
+days_with_impressions,90-day count,YES,Pre-export
+days_with_sessions,90-day count,YES,Pre-export
+content_age_days,content metadata,YES,Static property
+days_since_last_update,content metadata,YES,Pre-export
+word_count / char_count,content metadata,YES,Static property
+ctr,90-day derived rate,YES,"clicks/impressions, pre-export"
+avg_position,90-day GSC average,YES,Pre-export
+engagement_rate/scroll_rate,90-day GA4 signals,YES,Pre-export
+ai_traffic_pct,90-day derived,YES,Pre-export
+search_volume/competition,keyword metadata,YES,External; not label-derived
+impressions_last_30d,last 30-day sub-window,YES,Pre-export sub-window
+impressions_prev_30d,prev 30-day sub-window,YES,Pre-export sub-window
+impression_window_ratio,last_30d / prev_30d,YES,Both windows pre-export; correlated with label (intentional signal)
+trend_direction,LABEL SOURCE,NO — EXCLUDED,IS the label. Never in feature matrix.
+trend_pct,LABEL SOURCE magnitude,NO — EXCLUDED,Encodes trend_direction magnitude. Excluded.
+StandardScaler.fit(),training split only,YES,transform() only on val/test
+model selection,validation split only,YES,Test never used for selection

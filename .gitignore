@@ -1,0 +1,38 @@
+# Credentials — NEVER commit
+.env
+*.env
+!.env.example
+
+# Data (excluded from public repo; obtain from FlyRank starter)
+data/raw/
+data/processed/
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs (regenerated)
+outputs/tables/*.csv
+outputs/tables/*.json
+outputs/figures/*.png
+outputs/figures/*.svg
+!outputs/tables/.gitkeep
+!outputs/figures/.gitkeep
+
+# Models
+*.pkl
+*.joblib

@@ -1,0 +1,2 @@
+roc_auc,pr_auc,precision,recall,f1,threshold,n_positive,n_total,base_rate
+1.0,1.0,1.0,1.0,1.0,0.5,30,100,0.3
